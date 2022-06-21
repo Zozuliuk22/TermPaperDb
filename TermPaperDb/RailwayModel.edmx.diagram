@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="781c9de9959e4d2ab120c48e51f66cca" Name="Diagram1">
+        <EntityTypeShape EntityType="IS02_SellingRailwayTicketsModel.cCarriage" Width="1.5" PointX="5.25" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="IS02_SellingRailwayTicketsModel.cPlace" Width="1.5" PointX="7.5" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="IS02_SellingRailwayTicketsModel.cRoute" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IS02_SellingRailwayTicketsModel.cStation" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IS02_SellingRailwayTicketsModel.cStationInRoute" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="IS02_SellingRailwayTicketsModel.cTicket" Width="1.5" PointX="9.75" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="IS02_SellingRailwayTicketsModel.cType" Width="1.5" PointX="3" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="IS02_SellingRailwayTicketsModel.vTrain" Width="1.5" PointX="3" PointY="6.875" IsExpanded="true" />
+        <AssociationConnector Association="IS02_SellingRailwayTicketsModel.FK__cCarriage__Train__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="IS02_SellingRailwayTicketsModel.FK__cCarriage__TypeI__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="IS02_SellingRailwayTicketsModel.FK__cPlace__Carriage__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="IS02_SellingRailwayTicketsModel.FK__cTicket__PlaceId__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="IS02_SellingRailwayTicketsModel.FK__cStationI__Route__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="IS02_SellingRailwayTicketsModel.FK__vTrain__RouteId__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="IS02_SellingRailwayTicketsModel.FK__cStationI__Stati__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="IS02_SellingRailwayTicketsModel.FK__cTicket__Arrival__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="IS02_SellingRailwayTicketsModel.FK__cTicket__Departu__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="IS02_SellingRailwayTicketsModel.FK__cTicket__TrainId__4BAC3F29" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

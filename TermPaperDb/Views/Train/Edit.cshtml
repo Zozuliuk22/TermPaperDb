@@ -1,0 +1,46 @@
+﻿@model TermPaperDb.ViewModels.TrainEditViewModel
+@{
+    ViewBag.Title = "Edit";
+}
+<br />
+<br />
+
+
+<h3>Відредагувати існуючий потяг</h3>
+<br />
+<br />
+@using (Html.BeginForm("Edit", "Train"))
+{
+    <h5>
+        @Html.LabelFor(m => m.Name)
+    </h5>
+    <br />
+    @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+    <br />
+    <h5>
+        @Html.LabelFor(m => m.DepartureDate)
+    </h5>
+    <br />
+    @Html.TextBoxFor(m => m.DepartureDate, new { @class = "form-control", Value = String.Format("{0:dd.MM.yyyy}", Model.DepartureDate) })
+    <br />
+    <h5>
+        @Html.LabelFor(m => m.RouteId)
+    </h5>
+    <br />
+    @Html.DropDownListFor(m => m.RouteId, Model.Routes, "Виберіть маршрут", new { @class = "form-select" })
+    <br />
+    <br />
+    <button type="submit" class="btn btn-success">Edit (Редагувати)</button>
+}
+<br />
+@Html.ActionLink("Cancel (Відмінити)", "Index", "Train", new { @class = "btn btn-info" })
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />

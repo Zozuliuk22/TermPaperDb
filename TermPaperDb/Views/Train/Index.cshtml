@@ -1,0 +1,44 @@
+﻿@model TermPaperDb.ViewModels.TrainsViewModel
+@{
+    ViewBag.Title = "Потяги";
+}
+<br />
+<h4>Потяги</h4>
+<br />
+@Html.ActionLink("Створити новий потяг", "Create", "Train", new { area = "" }, new { @class = "btn btn-success" })
+<br />
+<br />
+
+<div class="menu">
+    @if (Model.Trains.Count() == 0)
+    {
+        <h2 style="text-align:center">Таблиця не є заповненою</h2>
+    }
+    else
+    {
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Назва</th>
+                    <th scope="col">Дата відправлення</th>
+                    <th scope="col">Маршрут</th>
+                </tr>
+            </thead>
+            @foreach (var item in Model.Trains)
+            {
+                <tbody>
+                    <tr class="table-light">
+                        <th scope="row">@item.Train.Id</th>
+                        <td><h5>@item.Train.Name</h5></td>
+                        <td><h5>@String.Format("{0:dd.MM.yyyy}", item.Train.DepartureDate)</h5></td>
+                        <td><h5>@item.Route.Name</h5></td>
+                        <td>@Html.ActionLink("Редагувати", "Edit", "Train", new { id = item.Train.Id }, new { @class = "btn btn-warning" })</td>
+                        <td>@Html.ActionLink("Видалити", "Delete", "Train", new { id = item.Train.Id }, new { @class = "btn btn-danger" })</td>
+                    </tr>
+                </tbody>
+            }
+        </table>
+    }
+    <br /><br />
+</div>
